@@ -1,7 +1,8 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
-use Laravel\Socialite\Facades\Socialite;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +14,16 @@ use Laravel\Socialite\Facades\Socialite;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::get('/', [PageController::class, 'index']);
 
+Route::get('/', function () {
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+});
 
-
-
-
-Route::get('/', 'App\Http\Controllers\PageController@index');
-Route::get('/apply', 'App\Http\Controllers\PageController@apply');
-Route::get('/blog', 'App\Http\Controllers\PageController@blog');
-Route::get('/discord', 'App\Http\Controllers\PageController@discord');
-Route::get('/wiki', 'App\Http\Controllers\PageController@wiki');
-
-
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->name('dashboard');

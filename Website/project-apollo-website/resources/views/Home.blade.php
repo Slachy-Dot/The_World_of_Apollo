@@ -2,7 +2,7 @@
 
 @section('content')
 
-@include('Includes.Login')
+
 
 <!--Online player and server name -->
 @include('Includes.OnlinePlayers')

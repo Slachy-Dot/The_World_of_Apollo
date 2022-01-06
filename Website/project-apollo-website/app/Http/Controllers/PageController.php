@@ -2,30 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Middleware\IsAdmin;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
 
-    /**
-     *  The PageController is used as main Routes Controller
-     *  this is done in order to keep web.php small and easy to read.
-     */
+    public function users()
+    {
+        return view('admin.users.index');
+    }
 
-   /** Apollo home-Page */
-    public function index(){
-        return view('Home');
+    public function categoriesIndex()
+    {
+        return view('admin.categories.index');
     }
-   /** Rederect to mcforum website */
-    public function apply(){
-        return view('Apply.index');
+
+    public function categoriesCreate()
+    {
+        return view('admin.categories.create');
     }
-   /** Apollo Discord join link  */
-    public function discord(){
-        return view('Discord.index');
-    }
-   /** Apollo Wiki-Page */
-    public function wiki(){
-        return view('Wiki.index');
+
+    public function threadsIndex()
+    {
+        return view('admin.threads.index');
     }
 }
