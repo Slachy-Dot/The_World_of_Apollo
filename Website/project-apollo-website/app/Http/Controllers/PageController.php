@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
 
+    /**
+     *  The PageController is used as main Routes Controller
+     *  this is done in order to keep web.php small and easy to read.
+     */
+
    /** Apollo home-Page */
     public function index(){
         return view('Home');
