@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,14 +13,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//
-Route::get('/', function () {
-    return view('pages.index');
-});
-Route::get('/wiki', function () {
-    return view('pages.wiki');
-});
-Route::get('/blog', function () {
-    return view('pages.blog');
-});
-//**
+//Route::get('/', [PageController::class, 'index']);
+
+
+
+
+
+Route::get('/', 'App\Http\Controllers\PageController@index');
+Route::get('/apply', 'App\Http\Controllers\PageController@apply');
+Route::get('/blog', 'App\Http\Controllers\PageController@blog');
+Route::get('/discord', 'App\Http\Controllers\PageController@discord');
+Route::get('/wiki', 'App\Http\Controllers\PageController@wiki');
+
+

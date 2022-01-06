@@ -34,7 +34,7 @@
   <body style="background-image: url(./storage/images/main/background.jpg);" class="min-h-screen bg-cover lg:">
 
     <!--Navbar-->
-    @include('inc.navbar')
+    @include('Includes.navbar')
 
 
   <section class="py-20 "> <!-- Wiki -->
@@ -1256,28 +1256,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!--Change the # from href from Discord, Teamspeak and Instagram to your links-->
       <footer class="bg-transparent ">
         <div class="container px-6 py-4 mx-auto ">
           <div class=" lg:flex">

@@ -32,9 +32,9 @@
   <!--Web background-->
   <body style="background-image: url(./storage/images/main/background.jpg);" class="min-h-screen bg-cover lg:">
     <div id="app">
-        @include('inc.navbar')
+        @include('Includes.navbar')
         <div class="container">
-            @include('inc.messages')
+            @include('Includes.messages')
             @yield('content')
         </div>
     </div>

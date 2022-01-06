@@ -14,7 +14,7 @@
           <div class="p-2 mx-2 space-x-6 uppercase bg-gray-900 border border-opacity-25 rounded-lg shadow md:space-x-8 xl:ml-10 xl:p-6 sm:p-4 bg-opacity-20 grow">
 
             <!--Always show -->
-            <a href=" #home" class="my-nav-items"><i> Home </i>
+            <a href=" /" class="my-nav-items"><i> Home </i>
             <!--Hide on sm show from md screen  -->
 
             <a href="https://worldofapollo.com/dynmap" class="hidden sm:inline-flex my-nav-items"> Dynmap </a>
