@@ -41,6 +41,7 @@ class AppServiceProvider extends ServiceProvider
         Relation::morphMap([
             Thread::TABLE => Thread::class,
             Reply::TABLE => Reply::class,
+            User::TABLE => User::class,
 
         ]);
     }
