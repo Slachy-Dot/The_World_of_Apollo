@@ -21,6 +21,24 @@ use App\Http\Controllers\Dashboard\NotificationController;
 |
 */
 
+
+Route::get('/', [PostController::class, 'index'])->name('home');
+Route::get('/posts/feed', 'PostFeedController@index')->name('posts.feed');
+Route::resource('posts', 'PostController')->only('show');
+Route::resource('users', 'UserController')->only('show');
+
+Route::get('newsletter-subscriptions/unsubscribe', 'NewsletterSubscriptionController@unsubscribe')->name('newsletter-subscriptions.unsubscribe');
+
+
+
+
+
+
+
+
+
+
+
 require 'admin.php';
 
 Route::get('/', [HomeController::class, 'index'])->name('home');

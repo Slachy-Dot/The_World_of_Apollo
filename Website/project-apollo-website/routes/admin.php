@@ -5,6 +5,23 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::resource('posts', 'PostController');
+Route::delete('/posts/{post}/thumbnail', 'PostThumbnailController@destroy')->name('posts_thumbnail.destroy');
+Route::resource('users', 'UserController')->only(['index', 'edit', 'update']);
+Route::resource('comments', 'CommentController')->only(['index', 'edit', 'update', 'destroy']);
+Route::resource('media', 'MediaLibraryController')->only(['index', 'show', 'create', 'store', 'destroy']);
+
+
+
+
+
+
+
+
+
+
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     // Dashboard
     Route::get('/', [DashboardController::class, 'index'])->name('index');
@@ -35,3 +52,4 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::delete('/{tag:slug}', [TagController::class, 'destroy'])->name('delete');
     });
 });
+

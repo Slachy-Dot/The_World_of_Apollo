@@ -1,48 +1,60 @@
-<x-base-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-logos.main class="w-32" />
-        </x-slot>
+@extends('layouts.app')
 
-        <x-jet-validation-errors class="mb-4" />
+@section('content')
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <h1>@lang('auth.login')</h1>
 
-        @if (session('status'))
-        <div class="mb-4 text-sm font-medium text-green-600">
-            {{ session('status') }}
-        </div>
-        @endif
+        {!! Form::open(['route' => 'login', 'role' => 'form', 'method' => 'POST']) !!}
+            <div class="form-group">
+                {!! Form::label('email', __('validation.attributes.email'), ['class' => 'control-label']) !!}
+                {!! Form::email('email', old('email'), ['class' => 'form-control' . ($errors->has('email') ? ' is-invalid' : ''), 'required', 'autofocus']) !!}
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block w-full mt-1" type="email" name="email" :value="old('email')" required autofocus />
+                @error('email')
+                    <span class="invalid-feedback">{{ $message }}</span>
+                @enderror
             </div>
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block w-full mt-1" type="password" name="password" required autocomplete="current-password" />
+            <div class="form-group">
+                {!! Form::label('password', __('validation.attributes.password'), ['class' => 'control-label']) !!}
+                {!! Form::password('password', ['class' => 'form-control' . ($errors->has('password') ? ' is-invalid' : ''), 'required']) !!}
+
+                @error('password')
+                    <span class="invalid-feedback">{{ $message }}</span>
+                @enderror
             </div>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        {!! Form::checkbox('remember', null, old('remember')) !!} @lang('auth.remember_me')
+                    </label>
+                </div>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                <a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
+            <div class="form-group">
+                {!! Form::submit(__('auth.login'), ['class' => 'btn btn-primary']) !!}
+                {{ link_to('/password/reset', __('auth.forgotten_password'), ['class' => 'btn btn-link'])}}
+            </div>
+        {!! Form::close() !!}
+
+        <hr>
+
+        <div class="flex-wrap d-flex justify-content-between">
+            @if (env('GITHUB_ID'))
+                <a href="{{ route('auth.provider', ['provider' => 'github']) }}" class="mb-2 btn btn-secondary">
+                    @lang('auth.services.github')
+                    <i class="fa fa-github" aria-hidden="true"></i>
                 </a>
-                @endif
+            @endif
 
-                <x-buttons.primary class="ml-4">
-                    {{ __('Log in') }}
-                </x-buttons.primary>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-base-layout>
+            @if (env('TWITTER_ID'))
+                <a href="{{ route('auth.provider', ['provider' => 'twitter']) }}" class="mb-2 btn btn-secondary">
+                    @lang('auth.services.twitter')
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            @endif
+        </div>
+    </div>
+</div>
+@endsection
