@@ -27,4 +27,6 @@ class PageController extends Controller
     {
         return view('admin.threads.index');
     }
+
+
 }
