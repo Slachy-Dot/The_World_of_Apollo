@@ -33,6 +33,7 @@ Route::get('/', function () {
 //* Used to link to different pages, making use of the PageController.php
 Route::get('/home', [PageController::class, 'Home'])->name('index');
 
+Route::get('/discord', [PageController::class, 'Discord'])->name('blog');
 Route::get('/test', [PageController::class, 'test'])->name('test');
 
 Route::get('/wiki', [PageController::class, 'wiki'])->name('index');

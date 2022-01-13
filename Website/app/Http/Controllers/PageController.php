@@ -21,8 +21,8 @@ class PageController extends Controller
         return view('Pages.Apply.index');
     }
    /** Apollo Discord join link  */
-    public function discord(){
-        return view('Pages.Discord.index');
+    public function Discord(){
+        return redirect()->away('https://discord.gg/rCBwKTQ');
     }
    /** Apollo Wiki-Page */
     public function wiki(){
@@ -30,6 +30,6 @@ class PageController extends Controller
     }
        /** Apollo Wiki-Page */
     public function test(){
-        return view('test');
+        return redirect()->away('https://www.google.com');
     }
 }
