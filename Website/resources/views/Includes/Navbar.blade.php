@@ -48,12 +48,6 @@
                             @endauth
                         @endif
 
-
-
-
-
-
-
                         <div class="inline-flex my-0 my-nav-items dropdown dropdown-end" tabindex="0">
                             <div tabindex="0">
 

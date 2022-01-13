@@ -49,12 +49,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('tasks', \App\Http\Controllers\TasksController::class);
 
     Route::resource('users', \App\Http\Controllers\UsersController::class);
-
-
-
-
-
-
 });
 
 
