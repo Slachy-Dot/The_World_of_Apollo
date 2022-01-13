@@ -25,11 +25,11 @@ class PageController extends Controller
         return redirect()->away('https://discord.gg/rCBwKTQ');
     }
    /** Apollo Wiki-Page */
-    public function wiki(){
+    public function Wiki(){
         return view('Pages.Wiki.index');
     }
-       /** Apollo Wiki-Page */
-    public function test(){
-        return redirect()->away('https://www.google.com');
+   /** Apollo Blog-post */
+    public function Blog(){
+        return view('Pages.Blog.index');
     }
 }

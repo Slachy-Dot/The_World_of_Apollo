@@ -33,15 +33,16 @@ Route::get('/', function () {
 //* Used to link to different pages, making use of the PageController.php
 Route::get('/home', [PageController::class, 'Home'])->name('index');
 
+
+//* Direct url redirect //*
 Route::get('/discord', [PageController::class, 'Discord']);
 Route::get('/apply', [PageController::class, 'McForum']);
-Route::get('/test', [PageController::class, 'test'])->name('test');
+//* End of Direct url redirect //*
 
-Route::get('/wiki', [PageController::class, 'wiki'])->name('index');
+Route::get('/wiki', [PageController::class, 'Wiki'])->name('index');
+Route::get('/blog', [PageController::class, 'Blog'])->name('index');
 
-Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
-
-//* If User is auth then show dashboard
+//* If User is auth then show dashboard //*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');})->name('dashboard');
 
