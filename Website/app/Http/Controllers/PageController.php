@@ -17,8 +17,8 @@ class PageController extends Controller
         return view('Pages.Home.index');
     }
    /** Rederect to mcforum website */
-    public function apply(){
-        return view('Pages.Apply.index');
+    public function McForum(){
+        return redirect()->away('https://www.minecraftforum.net/forums/servers-java-edition/pc-servers/3022300-the-world-of-apollo-1-17-1-semi-vanilla-survival');
     }
    /** Apollo Discord join link  */
     public function Discord(){
