@@ -1,4 +1,5 @@
 <section>
+
     <div id="about" class="my-card">
         <div class="px-2 mx-4 text-center">
 
@@ -29,6 +30,8 @@
                 them will lead to a
                 permanently ban from all Apollo related games and communication with our community members.</p>
         </div>
+
+
         <div tabindex="0" class="mx-2 mt-6 border collapse rounded-box border-base-300 collapse-arrow">
             <div class="text-xl font-extrabold text-center text-blue-300 collapse-title"> Server Hardware </div>
             <div class=" collapse-content">
@@ -42,6 +45,8 @@
                 <p class="mb-4 mr-8 font-serif text-sm font-medium text-right text-indigo-200"> Ubuntu 18.04 </p>
             </div>
         </div>
+
+
         <div tabindex="0" class="mx-2 border collapse rounded-box border-base-300 collapse-arrow">
             <div class="text-xl font-extrabold text-center text-blue-300 collapse-title"> Guest System </div>
             <div class="collapse-content">
@@ -52,6 +57,8 @@
                     explore there Minecraft builds </p>
             </div>
         </div>
+
+
         <div tabindex="0" class="mx-2 border collapse rounded-box border-base-300 collapse-arrow">
             <div class="text-xl font-extrabold text-center text-blue-300 collapse-title"> Guidelines </div>
             <div class="mx-4 font-mono font-medium text-blue-300 text-md collapse-content">
@@ -87,7 +94,10 @@
                         Conversations should be kept to English
                     </li>
 
+
                     <hr class="h-px my-6 bg-gray-300 border-none">
+
+
                     <h2 class="mx-4 my-4 font-medium text-center text-indigo-200 text-md font-base ml-15"> Apollo
                         Minecraft </h2>
                     <p class="mb-2"> The Discord Guidelines also apply in-game on top of that we have the following
@@ -125,4 +135,5 @@
             </div>
         </div>
     </div>
+
 </section>

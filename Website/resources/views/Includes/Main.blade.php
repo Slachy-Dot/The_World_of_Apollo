@@ -25,4 +25,11 @@
                     //display some data on page
                     //using data.players.list});
         </script>
+
     </head>
+
+    <header>
+
+    @include(' Includes.Navbar')
+
+    </header>

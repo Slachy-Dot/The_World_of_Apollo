@@ -15,31 +15,43 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <!-- <script defer src="https://unpkg.com/alpinejs@3.7.1/dist/cdn.min.js"></script> -->
+        <script>
+            fetch('https://api.mcsrvstat.us/2/Worldofapollo.com')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data.players.list)
+                    let pList = document.getElementById('list')
+                    pList.innerText = data.players.list
+                    //display some data on page
+                    //using data.players.list
 
+                });
+
+        </script>
     </head>
 
+    <header>
 
+        @include(' Includes.Navbar ')
+
+    </header>
 
     <!--Web background-->
 
     <body style="background-image: url(/storage/images/main/background.jpg);" class="min-h-screen bg-cover lg:">
 
-
+        @include('Includes.OnlinePlayers')
 
         <div id="app">
 
-            <div class="container">
-
-                @yield('content')
-
-            </div>
-        </div>
-
+         @yield('content')
 
         <div class="mt-20"></div>
 
-    @extends('Includes.Footer')
+        @include(' Includes.Footer ')
 
         <script src="https://leonardosnt.github.io/mc-player-counter/dist/mc-player-counter.min.js"></script>
+
     </body>
 </html>

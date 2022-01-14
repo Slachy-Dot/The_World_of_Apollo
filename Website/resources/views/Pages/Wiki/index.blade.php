@@ -1,6 +1,7 @@
 @extends(' layouts.Wiki ')
-@include('Includes.Navbar')
-@include('Includes.OnlinePlayers')
+
+@section('content')
+
 <section class="py-20 ">
     <!-- Wiki -->
 
@@ -1269,3 +1270,4 @@
         </div>
 
 </section>
+@endsection

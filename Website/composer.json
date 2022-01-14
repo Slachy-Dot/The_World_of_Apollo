@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "World of Apollo",
+    "type": "Website",
+    "description": "The World of apollo community website.",
+    "keywords": ["framework", "laravel", "TialwindCss"],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
