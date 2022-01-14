@@ -185,8 +185,6 @@ Project Link: [https://github.com/Slachy-Dot/The_World_of_Apollo](https://github
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
