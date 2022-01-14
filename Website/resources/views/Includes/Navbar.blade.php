@@ -14,6 +14,7 @@
 
                     <!--Always show -->
                     <a href=" /" class="my-nav-items"><i> Home </i>
+
                         <!--Hide on sm show from md screen  -->
 
                         <a href="https://worldofapollo.com/dynmap" class="hidden sm:inline-flex my-nav-items"> Dynmap
@@ -48,12 +49,6 @@
                             @endauth
                         @endif
 
-
-
-
-
-
-
                         <div class="inline-flex my-0 my-nav-items dropdown dropdown-end" tabindex="0">
                             <div tabindex="0">
 
@@ -84,6 +79,9 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
 </nav>

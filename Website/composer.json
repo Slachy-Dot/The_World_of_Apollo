@@ -1,8 +1,8 @@
 {
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "World of Apollo",
+    "type": "Website",
+    "description": "The World of apollo community website.",
+    "keywords": ["framework", "laravel", "TialwindCss"],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
@@ -19,6 +19,7 @@
         "spatie/laravel-permission": "^5.4"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

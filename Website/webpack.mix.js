@@ -17,12 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ]);
 
-mix.js('resources/js/apollo.js', 'public/js')
-    .postCss('resources/css/apollo.css', 'public/css' , [
-        require('postcss-import'),
-        require('tailwindcss'),
-    ]);
-
 if (mix.inProduction()) {
     mix.version();
 }

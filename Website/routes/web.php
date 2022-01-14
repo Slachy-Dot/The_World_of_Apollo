@@ -33,13 +33,16 @@ Route::get('/', function () {
 //* Used to link to different pages, making use of the PageController.php
 Route::get('/home', [PageController::class, 'Home'])->name('index');
 
-Route::get('/test', [PageController::class, 'test'])->name('test');
 
-Route::get('/wiki', [PageController::class, 'wiki'])->name('index');
+//* Direct url redirect //*
+Route::get('/discord', [PageController::class, 'Discord']);
+Route::get('/apply', [PageController::class, 'McForum']);
+//* End of Direct url redirect //*
 
-Route::get('/blog', [BlogController::class, 'blog'])->name('blog');
+Route::get('/wiki', [PageController::class, 'Wiki'])->name('index');
+Route::get('/blog', [PageController::class, 'Blog'])->name('index');
 
-//* If User is auth then show dashboard
+//* If User is auth then show dashboard //*
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');})->name('dashboard');
 
@@ -49,12 +52,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('tasks', \App\Http\Controllers\TasksController::class);
 
     Route::resource('users', \App\Http\Controllers\UsersController::class);
-
-
-
-
-
-
 });
 
 

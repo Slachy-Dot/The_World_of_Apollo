@@ -17,19 +17,19 @@ class PageController extends Controller
         return view('Pages.Home.index');
     }
    /** Rederect to mcforum website */
-    public function apply(){
-        return view('Pages.Apply.index');
+    public function McForum(){
+        return redirect()->away('https://www.minecraftforum.net/forums/servers-java-edition/pc-servers/3022300-the-world-of-apollo-1-17-1-semi-vanilla-survival');
     }
    /** Apollo Discord join link  */
-    public function discord(){
-        return view('Pages.Discord.index');
+    public function Discord(){
+        return redirect()->away('https://discord.gg/rCBwKTQ');
     }
    /** Apollo Wiki-Page */
-    public function wiki(){
+    public function Wiki(){
         return view('Pages.Wiki.index');
     }
-       /** Apollo Wiki-Page */
-    public function test(){
-        return view('test');
+   /** Apollo Blog-post */
+    public function Blog(){
+        return view('Pages.Blog.index');
     }
 }
