@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022 Slachy - the world of apollo
+Copyright (c) 2022 Slachy - The World of Apollo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
