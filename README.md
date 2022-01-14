@@ -1,12 +1,5 @@
 # The_World_of_Apollo
 
-# Main apollo github page 
-
-- full push of Apollo website excluding dynmap map-image files 
-- updated to Tailwind 3
-- 
--
-
 <div id="top"></div>
 <!--
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -42,10 +35,10 @@
     <img src="Apollo_logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">The World of Apollo </h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    A open-source community project!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
@@ -91,7 +84,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://worldofapollo.com)
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -110,7 +103,6 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
-* [Html](https://nextjs.org/)
 * [Tailwind Css](https://reactjs.org/)
 * [Laravel php](https://vuejs.org/)
 
@@ -121,16 +113,31 @@ Use the `BLANK_README.md` to get started.
 <!-- GETTING STARTED -->
 ## Getting Started
 
+ Thinks needed before able to install
+
+ Php 8 
+ xampp - apache/mysql
+
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Slachy-Dot/The_World_of_Apollo.git
+   ```
+2. npm
   ```sh
-  npm install npm@latest -g
+  npm install
   ```
+3. composer
+  ```sh
+  composer install
+  ```  
 
 ### Installation
 
@@ -169,12 +176,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 
 - [x] Add Laravel php framework
-- [ ] Convert old project to new laravel 
+- [x] Convert old project to new laravel 
 - [ ] Update README.md
-- [ ] Add User auth
-- [ ] Add Forum page
-- [ ] Add Wiki Page
-- [ ] Add file upload system
+- [X] Add User auth
+- [X] Add Forum page
+- [X] Add Wiki Page
+- [-] Add file upload system
 
 See the [open issues](https://github.com/Slachy-Dot/The_World_of_Apollo/issues) for a full list of proposed features (and known issues).
 
