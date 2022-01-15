@@ -8,7 +8,7 @@ class CreateTasksTable extends Migration
 {
     public function up()
     {
-        Schema::create('tasks', function (Blueprint $table) {
+        Schema::connection('Auth')->create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('description');
             $table->timestamps();

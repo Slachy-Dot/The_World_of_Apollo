@@ -85,7 +85,7 @@ Use the `BLANK_README.md` to get started.
 ### Built With
 
 * [Laravel php framework](https://laravel.com/)
-- [Jetstram]()
+- [Jetstream]()
 - [livewire]()
 - [riari-forum]()
 - [form-components]()
@@ -129,7 +129,6 @@ _Below is an example of how you can instruct your audience on installing and set
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- ROADMAP -->
 ## Roadmap
 
 - [x] Add Laravel php framework
